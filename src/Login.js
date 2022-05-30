@@ -1,8 +1,10 @@
 import React, { useState, useContext, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { DataAppContext } from './common/DataApp';
 
 const Login = () => {
     const [username, setUserName] = useState('');
+    const navigate = useNavigate();
 
     const updateUsernameFn = (event) => {
         setUserName(event.target.value);
@@ -13,9 +15,11 @@ const Login = () => {
 
     const loginFn = () => {
         //api call
-        //if verified
+        //if verified - update on context
         loginDetails.setLogin(true);
         loginDetails.setUserName(username);
+        //redirection
+        navigate('/misc', {state: {username: username}});
         
     }
 

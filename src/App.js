@@ -24,6 +24,7 @@ import Github from './Github';
 import GithubFn from './GithubFn';
 import ContactApp from './ContactApp';
 import HookReducer from './hooks/HookReducer';
+import ParentPropsDrilling from './context/ParentPropsDrilling';
 import Parent, { NameContext } from './context/Parent';
 
 import Header from './common/Header';
@@ -36,6 +37,12 @@ import DataApp from './common/DataApp';
 import Login from './Login';
 import ColorApp from './ColorApp';
 import NotFound from './common/NotFound';
+
+import Misc from './Misc';
+import HookLayoutEffect from './hooks/HookLayoutEffect';
+import HookParams from './hooks/HookParams';
+import HookMemo from './hooks/HookMemo';
+import HookCallback from './hooks/HookCallback';
 
 function App() {
   return (
@@ -68,14 +75,22 @@ function App() {
                 <Route path='/contactapp' element={<ContactApp />}/>
                 <Route path='/hookreducer' element={<HookReducer />}/>
                 <Route path='/parent' element={<Parent />}/>
+                <Route path='/parentpropsdrilling' element={<ParentPropsDrilling />}/>
                 <Route path='/login' element={<Login />}/>
                 <Route path='/colorapp' element={<ColorApp />}/>
+                
                 <Route path='/apps'>
                   <Route path='app1' element={<EMI />}/>
                   <Route path='app2' element={<ColorApp />}/>
                   <Route path='app3' element={<GithubFn />}/>
                 </Route>
-                <Route path='/' element={<Home />}/>
+                <Route path='/hooklayouteffect' element={<HookLayoutEffect />}/>
+                <Route path='/hookparams/:id' element={<HookParams />}/>
+                <Route path='/misc' element={<Misc />}/>
+                <Route path='/hookmemo' element={<HookMemo />}/>
+                <Route path='/hookcallback' element={<HookCallback />}/>
+                
+                <Route path='/' element={<Login />}/>
                 <Route path='/*' element={<NotFound />}/>
               </Routes>
             </div>

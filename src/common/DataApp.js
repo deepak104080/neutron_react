@@ -6,10 +6,11 @@ const DataApp = (props) => {
     const [isLoggedIn, setLogin] = useState(true);
     const [userName, setUserName] = useState('Newton School');
     const [bgColor, setBgColor] = useState('white');
+    
     useEffect(()=>{
-        console.log('isLoggedIn', isLoggedIn);
-        console.log('userName', userName);
-        console.log('bgColor', bgColor);
+        // console.log('isLoggedIn', isLoggedIn);
+        // console.log('userName', userName);
+        // console.log('bgColor', bgColor);
     })
     return(
         <>

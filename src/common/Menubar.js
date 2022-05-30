@@ -1,6 +1,6 @@
 import React, { Children } from 'react';
 import {Link} from 'react-router-dom';
-import {Nav, Navbar} from 'react-bootstrap';
+import {Nav, Navbar, NavDropdown} from 'react-bootstrap';
 
 const Menubar = ()=>{
     return(
@@ -8,6 +8,21 @@ const Menubar = ()=>{
             <div className='row bg-info bg-opacity-75'>
             <div className='col-12 text-center'>
                 <Navbar>
+
+                    <NavDropdown title="Hooks" id="nav-dropdown" className='btn btn-outline-success'>
+                        <NavDropdown.Item>
+                            <Link to='/hooklayouteffect' className='nav-link btn btn-outline-success'>Hook Layout Effect</Link>
+                        </NavDropdown.Item>
+                        <NavDropdown.Item>
+                            <Link to='/hookmemo' className='nav-link btn btn-outline-success'>Hook Memo</Link>
+                        </NavDropdown.Item>
+                        <NavDropdown.Item>
+                            <Link to='/hookcallback' className='nav-link btn btn-outline-success'>Hook Callback</Link>
+                        </NavDropdown.Item>
+                    </NavDropdown>
+
+
+                    <Link to='/misc' className='nav-link btn btn-outline-success'>Misc</Link>
                     <Link to='/colorapp' className='nav-link btn btn-outline-success'>Color App</Link>
                     <Link to='/parent' className='nav-link btn btn-outline-success'>Context - Props Drilling</Link>
                     <Link to='/hookreducer' className='nav-link btn btn-outline-success'>Hook Reducer</Link>
