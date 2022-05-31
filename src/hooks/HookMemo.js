@@ -66,3 +66,18 @@ export default HookMemo;
 
 
 // const [var, fn] = obj
+
+
+// Hooks List
+// State - useState
+// Lifecycle Method - useEffect
+// Context - useContext
+// Redux - useReducer
+// Ref - useRef
+// Memo - useMemo
+// useCallback
+// useLayoutEffect
+
+// useNavigate
+// useLocation
+// useParams

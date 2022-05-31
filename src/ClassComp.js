@@ -23,10 +23,15 @@ class ClassComp extends React.Component {
         //update state varible
 
         // fetch('url') - json format for rest API
-
     }
     componentDidUpdate() {
         console.log('my tkt booked for component did update');
+        // if(this.state.count < 10) {
+        //     this.setState({
+        //         count: this.state.count + 1
+        //     })
+        // }
+        //never call setState method with breaking condition
     }
     
 
