@@ -14,7 +14,7 @@ const Misc = () => {
         <>
             <div className='row bg-info bg-opacity-50'>
                 <div className='col-9'>
-                    {loginDetails.isLoggedIn && <div>Hi {state.username}</div>}
+                    {loginDetails.isLoggedIn && <div>Hi {state.username || ' '}</div>}
                 </div>
                 <div className='col-3'>
                     {loginDetails.isLoggedIn ? 
